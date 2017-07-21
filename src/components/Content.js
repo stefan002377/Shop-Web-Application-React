@@ -19,18 +19,6 @@ class Content extends React.Component {
     return (
       <div className="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
         <h2 className="page-header">{categoryTitle}</h2>
-        <div className="dropdown">
-          <button className="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By
-          <span className="caret"></span></button>
-          <ul className="dropdown-menu activedrop">
-            <li><a href="#">Default</a></li>
-            <li><a href="#">Title ASC</a></li>
-            <li><a href="#">Title DESC</a></li>
-            <li><a href="#">Price ASC</a></li>
-            <li><a href="#">Price DESC</a></li>
-            <li><a href="#">Stars</a></li>
-          </ul>
-        </div>
         <div className="row">
           {listProducts.map(cat=>
             cat.products.map(pro=>
