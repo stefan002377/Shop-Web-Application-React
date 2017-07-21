@@ -1,1 +1,3 @@
-# shop-react
+# Shop React
+
+A simple Shop Web Aplication created with React
