@@ -16,30 +16,12 @@ class HeaderTop extends React.Component {
 
    render() {
      return (
-          <nav className = "navbar navbar-inverse navbar-fixed-top" >
-            <div className="container-fluid">
-              <div className="navbar-header">
-                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span className="sr-only">Toggle navigation</span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                </button>
-                <Link to={`/`} className="navbar-brand">SHOP React</Link>
-              </div>
-              <div id="navbar" className="navbar-collapse collapse">
-                <ul className="nav navbar-nav navbar-right">
-                  <li>
-                    <Link to={`/`}>Vesion 0.0.1</Link>
-                  </li>
-                </ul>
-                {this.state.searchInput}
-                <form className="navbar-form navbar-right">
-                  <input type="text" value={this.state.searchInput} onChange={this.searchTop} className="form-control" placeholder="Search..."/>
-                </form>
-              </div>
-            </div>
-          </nav>
+         <div className="col-md-12 col-lg-12 col-sm-12">
+           <h2 className="logo pull-left"><Link to="/">Shop React</Link></h2>
+           <div className="cart-button pull-right">
+              <Link to="/cart" className="btn btn-warning btn-md"><span className="glyphicon glyphicon-shopping-cart"></span>Cart Empty</Link>
+           </div>
+        </div>
      );
    }
  }

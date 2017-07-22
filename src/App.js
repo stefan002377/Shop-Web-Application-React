@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import HeaderTop from './components/HeaderTop';
 import SidebarLeft from './components/SidebarLeft';
-import SidebarRight from './components/SidebarRight';
 import Content from './components/Content';
 import ContentProduct from './components/ContentProduct';
 import $ from "jquery";
@@ -15,7 +14,6 @@ class App extends React.Component {
       dataInfo: [],
       dataSearch: ''
     };
-    this.addNewCategory = this.addNewCategory.bind(this);
     this.addNewProduct = this.addNewProduct.bind(this);
     this.searchProducts = this.searchProducts.bind(this);
   }
@@ -42,27 +40,21 @@ class App extends React.Component {
     console.log(newProduct);
   }
 
-  addNewCategory(newCat) {
-    let newCategory = {
-        "id_c": this.state.dataInfo.length,
-        "category": newCat,
-        "slug": "/books-audible",
-        "products": []
-      }
-    this.setState({dataInfo: [...this.state.dataInfo, newCategory]});
-  }
-
   render() {
     return (
       <Router>
-      <div><HeaderTop searchProducts={this.searchProducts}/>
-        <div className="container-fluid">
-          <div className="row">
-            <SidebarLeft listCategory={this.state.dataInfo} addNewCategory={this.addNewCategory}/>
+      <div className="container">
+        <div className="row header">
+          <HeaderTop/>
+        </div>
+        <div className="row content">
+          <div className="col-md-3 col-lg-3 col-sm-3 sidebar">
+            <SidebarLeft listCategory={this.state.dataInfo} />
+          </div>
+          <div className="col-md-9 col-lg-9 col-sm-9 contentinfo">
             <Route exact path="/:slug" render={props => <Content listProducts={this.state.dataInfo} addNewProduct={this.addNewProduct} searchKey={this.state.dataSearch} {...props} />} />
             <Route exact path="/" render={props => <Content listProducts={this.state.dataInfo} addNewProduct={this.addNewProduct} searchKey={this.state.dataSearch} {...props} />} />
             <Route path="/:slug/:id_p" render={props => <ContentProduct listProducts={this.state.dataInfo}  {...props} />} />
-            <SidebarRight listCategory={this.state.dataInfo} addNewCategory={this.addNewCategory}/>
           </div>
         </div>
       </div>
