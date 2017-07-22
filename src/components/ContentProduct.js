@@ -11,7 +11,7 @@ class ContentProduct extends React.Component {
       <div>
           {listProducts.map( cat =>
             cat.products.map( pro =>
-              pro.id_p == this.props.match.params.id_p &&
+              pro.id_p === parseInt(this.props.match.params.id_p,0) &&
               <div>
               <h3 className="page-header">{pro.title}</h3>
               <div className="row product-single">
@@ -19,14 +19,14 @@ class ContentProduct extends React.Component {
                   <div className="row">
                     <div className="raiting pull-left" >
                       {[...Array(5)].map((x, i) =>
-                          <span className={"glyphicon glyphicon-star " + (pro.raiting >= i ? 'activestar' : 'glyphicon glyphicon-star')}></span>
+                          <span key={i} className={"glyphicon glyphicon-star " + (pro.raiting >= i ? 'activestar' : 'glyphicon glyphicon-star')}></span>
                       )}
                     </div>
                     <div className="price pull-right" >{pro.price}</div>
                   </div>
                   <div className="row">
                     <p className="clearfix">{pro.desc}</p>
-                    <Link to="/cart" className="btn btn-info pull-left" role="button">Buy Now »</Link>
+                    <Link to={"/cart/"+pro.id_p} className="btn btn-info pull-left" role="button">Buy Now »</Link>
                     <div className="related_prod pull-left" >{pro.related_prod}</div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ class ContentProduct extends React.Component {
             <div className="row products">
               {listProducts.map( cat =>
                 cat.products.map( pro =>
-                pro.id_p != this.props.match.params.id_p &&
+                pro.id_p !== parseInt(this.props.match.params.id_p,0) &&
                 <div className="col-md-4 col-lg-4 col-sm-4" key={pro.id_p}>
                   <div className="box-product clearfix">
                     <Link to={'/'+cat.slug+'/'+pro.id_p}><img src={pro.image} className="img-responsive pull-left" alt=""/></Link>

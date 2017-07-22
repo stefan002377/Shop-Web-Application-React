@@ -30,6 +30,23 @@
     clear: both;
     padding-top: 20px;
 }
+.cart .box-product {
+    border: 1px solid #eee;
+    margin: 25px 0px 0;
+    padding: 10px;
+}
+.cart .box-product h4 {
+    clear: both;
+}
+.cart .price {
+  margin-top: 23px;
+}
+.cart .btn-danger {
+  margin-top: 20px;
+}
+.cart .btn-danger span {
+  margin-right: 10px;
+}
 .serch-form .form-inline input {
     width: 100%;
     border-radius: 0px;
