@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 
 class HeaderTop extends React.Component {
     constructor(props) {
@@ -19,7 +19,11 @@ class HeaderTop extends React.Component {
          <div className="col-md-12 col-lg-12 col-sm-12">
            <h2 className="logo pull-left"><Link to="/">Shop React</Link></h2>
            <div className="cart-button pull-right">
-              <Link to="/cart" className="btn btn-warning btn-md"><span className="glyphicon glyphicon-shopping-cart"></span>Cart Empty</Link>
+              <NavLink to="/" className="btn btn-default btn-md" activeClassName="active">Home</NavLink>
+              <NavLink to="/shop" className="btn btn-default btn-md" activeClassName="active">Shop</NavLink>
+              <NavLink to="/page" className="btn btn-default btn-md" activeClassName="active">Page</NavLink>
+              <NavLink to="/components" className="btn btn-default btn-md" activeClassName="active">Components</NavLink>
+              <NavLink to="/cart" className="btn btn-warning btn-md" activeClassName="active"><span className="glyphicon glyphicon-shopping-cart"></span>Cart</NavLink>
            </div>
         </div>
      );

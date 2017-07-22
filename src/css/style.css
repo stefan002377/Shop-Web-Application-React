@@ -64,6 +64,9 @@
 .cart-button span {
     margin-right:10px;
 }
+.cart-button .btn-md {
+    margin-left:10px;
+}
 .price {
     color: orange;
     font-size: 20px;
@@ -85,4 +88,18 @@
 }
 .related-products {
    margin-top:30px
+}
+.result-products {
+    border: 1px solid #eee;
+    border-top: none;
+    border-bottom: none;
+}
+.result-products ul {
+    padding:0px;
+    margin:0px;
+}
+.result-products li {
+    list-style: none;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 15px;
 }
