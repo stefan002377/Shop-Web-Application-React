@@ -18,7 +18,7 @@ class SidebarProducts extends React.Component {
          </div>
          <div className="list-group">
            {this.props.listCategory.map( cat =>
-           <NavLink to={'/'+cat.slug} key={cat.id_cat} className="list-group-item info" activeClassName="active">{cat.title} </NavLink>
+           <NavLink to={'/reactjs-shop/'+cat.slug} key={cat.id_cat} className="list-group-item info" activeClassName="active">{cat.title} </NavLink>
            )}
          </div>
        </div>

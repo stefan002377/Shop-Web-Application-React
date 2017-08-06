@@ -29,7 +29,7 @@ class Cart extends React.Component {
             <div className="col-md-12 col-lg-12 col-sm-12" key={pro.id_p}>
               <div className="box-product clearfix">
                 <div className="col-md-1 col-lg-1 col-sm-1">
-                  <Link to={'/product/'+pro.id_p}><img src={pro.images} className="img-responsive pull-left" alt=""/></Link>
+                  <Link to={'/reactjs-shop/product/'+pro.id_p}><img src={pro.images} className="img-responsive pull-left" alt=""/></Link>
                 </div>
                 <div className="col-md-7 col-lg-7 col-sm-7">
                   <h4 className="clearfix title-product"><Link to={'/product/'+pro.id_p}>{pro.title}</Link></h4>
@@ -46,7 +46,7 @@ class Cart extends React.Component {
           )}
         </div>
         <div className="cart-button text-center">
-          <Link to="/" className="btn btn-info btn-md">Continue Shop</Link>
+          <Link to="/reactjs-shop/" className="btn btn-info btn-md">Continue Shop</Link>
         </div>
       </div>
     );

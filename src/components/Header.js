@@ -14,12 +14,12 @@ class Header extends React.Component {
                <span className="icon-bar"></span>
                <span className="icon-bar"></span>
              </button>
-             <Link className="navbar-brand"  to="/">Shop React</Link>
+             <Link className="navbar-brand"  to="/reactjs-shop">Shop React</Link>
            </div>
            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
              <ul className="nav navbar-nav navbar-right">
-               <li><NavLink exact to="/"  activeClassName="active">Start Page</NavLink></li>
-               <li><NavLink exact to="/cart"  activeClassName="active"><span className="glyphicon glyphicon-shopping-cart"></span> {this.props.cartProduct.length} Products</NavLink></li>
+               <li><NavLink exact to="/reactjs-shop/"  activeClassName="active">Start Page</NavLink></li>
+               <li><NavLink exact to="/reactjs-shop/cart"  activeClassName="active"><span className="glyphicon glyphicon-shopping-cart"></span> {this.props.cartProduct.length} Products</NavLink></li>
              </ul>
            </div>
          </div>

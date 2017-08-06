@@ -50,7 +50,7 @@ class ProductSingle extends React.Component {
                   </div>
                   <div className="price pull-right">{pro.price}$</div>
                   <div className="text-center buy-button">
-                    <Link to={"/cart/"} onClick={this.addProductCart.bind(this, pro.id_p)} className="btn btn-info" role="button">{(this.props.cartInfo.indexOf(pro.id_p) === -1) ? 'Buy Now »': 'Go Cart' }</Link>
+                    <Link to={"/reactjs-shop/cart/"} onClick={this.addProductCart.bind(this, pro.id_p)} className="btn btn-info" role="button">{(this.props.cartInfo.indexOf(pro.id_p) === -1) ? 'Buy Now »': 'Go Cart' }</Link>
                   </div>
                 </div>
               </div>
