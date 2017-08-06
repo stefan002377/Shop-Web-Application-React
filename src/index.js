@@ -65,10 +65,10 @@ class ShopReact extends React.Component {
         <div className="container">
           <div className="row content">
             <Switch>
-              <Route exact path="/" render={props => <Products listCategory={this.state.listCategory} listProducts={this.state.listProducts} {...props} />} />
-              <Route exact path="/cart" render={props => <Cart listProducts={this.state.listProducts} cartInfo={this.state.cart} deleteProductCart={this.deleteProductCart}  {...props}/>} />
-              <Route exact path="/:slug" render={props => <Products listCategory={this.state.listCategory} listProducts={this.state.listProducts} {...props} />} />
-              <Route path="/product/:id_p" render={props => <ProductSingle listProducts={this.state.listProducts} cartInfo={this.state.cart} addProductCart={this.addProductCart}  {...props} />} />
+              <Route exact path="/reactjs-shop/" render={props => <Products listCategory={this.state.listCategory} listProducts={this.state.listProducts} {...props} />} />
+              <Route exact path="/reactjs-shop/cart" render={props => <Cart listProducts={this.state.listProducts} cartInfo={this.state.cart} deleteProductCart={this.deleteProductCart}  {...props}/>} />
+              <Route exact path="/reactjs-shop/:slug" render={props => <Products listCategory={this.state.listCategory} listProducts={this.state.listProducts} {...props} />} />
+              <Route path="/reactjs-shop/product/:id_p" render={props => <ProductSingle listProducts={this.state.listProducts} cartInfo={this.state.cart} addProductCart={this.addProductCart}  {...props} />} />
             </Switch>
           </div>
         </div>
